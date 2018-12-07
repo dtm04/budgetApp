@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ac" maxHeight="Infinity" maxWidth="Infinity" minHeight="0" minWidth="0" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #4E878C;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.HomePageController">
+    <children>
+        <MenuButton layoutX="3.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="54.0" style="-fx-background-color: #B5FFE1;">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#goToHomePage" text="Home" />
+                <MenuItem mnemonicParsing="false" onAction="#goToCrypto" text="Currencies" />
+                <MenuItem mnemonicParsing="false" onAction="#goToViewTransactions" text="Transactions" />
+                <MenuItem mnemonicParsing="false" onAction="#goToAddGoalsPage" text="Goals" />
+                <MenuItem mnemonicParsing="false" onAction="#goToUpdateAccount" text="Settings" />
+                <MenuItem mnemonicParsing="false" onAction="#goToLoginPage" text="Sign Out" />
+            </items>
+        </MenuButton>
+        <Label layoutX="2.0" layoutY="104.0" text="Account Balance:" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+        <Label layoutX="250.0" layoutY="11.0" text="Welcome to CryptoBudget: " textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+        <Label fx:id="name" layoutX="528.0" layoutY="11.0" prefHeight="17.0" prefWidth="200.0" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+        <Label fx:id="accountBalance" layoutX="131.0" layoutY="104.0" prefHeight="17.0" prefWidth="567.0" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label fx:id="gn_head" layoutX="2.0" layoutY="242.0" prefHeight="25.0" prefWidth="87.0" text="Goal Name" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label fx:id="ed_head" layoutX="115.0" layoutY="242.0" prefHeight="17.0" prefWidth="71.0" text="End Date" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label fx:id="as_head" layoutX="355.0" layoutY="242.0" prefHeight="25.0" prefWidth="120.0" text="Amount Saved" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <JFXProgressBar fx:id="g_progress" layoutX="520.0" layoutY="279.0" prefHeight="17.0" />
+      <Label fx:id="ga_head" layoutX="217.0" layoutY="242.0" prefHeight="25.0" prefWidth="100.0" text="Goal Amount" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <PieChart fx:id="cur_piechart" layoutX="751.0" layoutY="121.0" prefHeight="191.0" prefWidth="270.0" />
+      <Label layoutX="808.0" layoutY="88.0" prefHeight="32.0" prefWidth="157.0" text="Account Currencies" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label fx:id="gn_label" layoutX="5.0" layoutY="271.0" prefHeight="25.0" prefWidth="93.0" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label fx:id="ed_label" layoutX="101.0" layoutY="271.0" prefHeight="25.0" prefWidth="100.0" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label fx:id="ga_label" layoutX="217.0" layoutY="275.0" prefHeight="25.0" prefWidth="120.0" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label fx:id="as_label" layoutX="355.0" layoutY="275.0" prefHeight="25.0" prefWidth="147.0" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+    </children>
+</AnchorPane>

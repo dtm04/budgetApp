@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ac" maxHeight="Infinity" maxWidth="Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #4E878C;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.EditGoalsController">
+    <children>
+        <Label layoutX="574.0" layoutY="19.0" text="Edit Goals" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+
+        <Label layoutX="27.0" layoutY="94.0" text="Goal Amount:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font></Label>
+        <JFXTextField fx:id="amountField" focusColor="#14f5de" layoutX="143.0" layoutY="94.0" unFocusColor="BLACK" />
+
+        <Label layoutX="57.0" layoutY="130.0" text="Currency:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font></Label>
+        <JFXTextField fx:id="currencyField" focusColor="#14f5de" layoutX="143.0" layoutY="130.0" unFocusColor="BLACK" />
+
+        <Label layoutX="80.0" layoutY="242.0" text="Date:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font></Label>
+        <JFXDatePicker fx:id="datePicker" defaultColor="#14f5de" layoutX="143.0" layoutY="240.0" />
+
+        <Label layoutX="3.0" layoutY="286.0" prefHeight="25.0" prefWidth="128.0" text="Current Amount:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font></Label>
+        <JFXTextField fx:id="currentAmountField" focusColor="#14f5de" layoutX="143.0" layoutY="286.0" unFocusColor="BLACK" />
+
+        <JFXButton buttonType="RAISED" layoutX="143.0" layoutY="350.0" mnemonicParsing="false" onAction="#update" prefHeight="32.0" prefWidth="72.0" ripplerFill="#00f2fa" style="-fx-background-color: #B5FFE1;" text="Update" />
+
+        <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="2.0" mnemonicParsing="false" onAction="#goToAddGoalsPage" prefHeight="25.0" text="Back" />
+        <MenuButton layoutX="3.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="54.0" style="-fx-background-color: #B5FFE1;">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#goToHomePage" text="Home" />
+                <MenuItem mnemonicParsing="false" onAction="#goToCrypto" text="Currencies" />
+                <MenuItem mnemonicParsing="false" onAction="#goToViewTransactions" text="Transactions" />
+                <MenuItem mnemonicParsing="false" onAction="#goToAddGoalsPage" text="Goals" />
+                <MenuItem mnemonicParsing="false" onAction="#goToUpdateAccount" text="Settings" />
+                <MenuItem mnemonicParsing="false" onAction="#goToLoginPage" text="Sign Out" />
+            </items>
+        </MenuButton>
+    </children>
+</AnchorPane>
